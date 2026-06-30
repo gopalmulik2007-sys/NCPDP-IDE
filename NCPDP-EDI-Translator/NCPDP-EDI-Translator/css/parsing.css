@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:260px;
+    background:#0f172a;
+    color:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    padding:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:40px;
+}
+
+.logo i{
+    color:#3b82f6;
+    font-size:30px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    padding:15px;
+    margin-bottom:10px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.menu li:hover{
+    background:#1d4ed8;
+}
+
+.menu .active{
+    background:#2563eb;
+}
+
+/* Main Content */
+
+.main-content{
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:30px;
+}
+
+/* Top Bar */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.topbar h1{
+    font-size:28px;
+}
+
+#parseBtn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#parseBtn:hover{
+    background:#1d4ed8;
+}
+
+/* Cards */
+
+.card{
+    background:white;
+    margin-top:25px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h2{
+    margin-bottom:20px;
+}
+
+/* Progress */
+
+.progress{
+    width:100%;
+    height:20px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:#2563eb;
+    transition:.3s;
+}
+
+/* Table */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#2563eb;
+    color:white;
+    padding:14px;
+}
+
+table td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+    text-align:center;
+}
+
+table tr:hover{
+    background:#f8fafc;
+}
+
+/* JSON Output */
+
+textarea{
+    width:100%;
+    height:250px;
+    resize:none;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:15px;
+    font-size:14px;
+    outline:none;
+    background:#fafafa;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.sidebar{
+    display:none;
+}
+
+.main-content{
+    margin-left:0;
+    width:100%;
+}
+
+.topbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+}

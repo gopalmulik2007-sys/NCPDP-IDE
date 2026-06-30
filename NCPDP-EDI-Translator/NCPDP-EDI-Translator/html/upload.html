@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>File Upload | NCPDP EDI Translator API</title>
+
+    <link rel="stylesheet" href="../css/upload.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-file-waveform"></i>
+
+            <h2>NCPDP EDI</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li onclick="location.href='dashboard.html'">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </li>
+
+            <li class="active">
+
+                <i class="fa-solid fa-upload"></i>
+
+                <span>File Upload</span>
+
+            </li>
+
+            <li onclick="location.href='parsing.html'">
+
+                <i class="fa-solid fa-code"></i>
+
+                <span>Parsing</span>
+
+            </li>
+
+            <li onclick="location.href='validation.html'">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>Validation</span>
+
+            </li>
+
+            <li onclick="location.href='translation.html'">
+
+                <i class="fa-solid fa-language"></i>
+
+                <span>Translation</span>
+
+            </li>
+
+            <li onclick="location.href='api.html'">
+
+                <i class="fa-solid fa-cloud"></i>
+
+                <span>API Usage</span>
+
+            </li>
+
+            <li onclick="location.href='data.html'">
+
+                <i class="fa-solid fa-database"></i>
+
+                <span>Data Viewer</span>
+
+            </li>
+
+            <li onclick="location.href='error.html'">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                <span>Error Reporting</span>
+
+            </li>
+
+            <li onclick="location.href='settings.html'">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </li>
+
+            <li onclick="location.href='../index.html'">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main-content">
+
+        <!-- Top Bar -->
+
+        <header class="topbar">
+
+            <h1>File Upload</h1>
+
+            <button id="refreshBtn">
+
+                <i class="fa-solid fa-rotate-right"></i>
+
+                Refresh
+
+            </button>
+
+        </header>
+
+        <!-- Upload Card -->
+
+        <section class="upload-card">
+
+            <h2>Upload EDI File</h2>
+
+            <p>Select an <b>.EDI</b> or <b>.TXT</b> file for intelligent parsing.</p>
+
+            <div class="drop-area" id="dropArea">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                <h3>Drag & Drop File Here</h3>
+
+                <p>or</p>
+
+                <label for="fileInput" class="browse-btn">
+
+                    Browse File
+
+                </label>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".txt,.edi"
+                    hidden>
+
+            </div>
+
+            <div class="progress-container">
+
+                <div class="progress-bar" id="progressBar"></div>
+
+            </div>
+
+            <div id="status"></div>
+
+        </section>
+
+        <!-- File Details -->
+
+        <section class="details-card">
+
+            <h2>Uploaded File Details</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>File Name</th>
+
+                    <td id="fileName">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>File Size</th>
+
+                    <td id="fileSize">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>File Type</th>
+
+                    <td id="fileType">-</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- Preview -->
+
+        <section class="preview-card">
+
+            <h2>File Preview</h2>
+
+            <textarea
+                id="preview"
+                readonly
+                placeholder="Uploaded file content will appear here..."></textarea>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/upload.js"></script>
+
+</body>
+
+</html>

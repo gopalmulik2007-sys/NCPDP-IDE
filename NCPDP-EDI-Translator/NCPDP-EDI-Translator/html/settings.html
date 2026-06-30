@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | NCPDP EDI Translator API</title>
+
+    <link rel="stylesheet" href="../css/settings.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-file-waveform"></i>
+            <h2>NCPDP EDI</h2>
+        </div>
+
+        <ul class="menu">
+
+            <li onclick="location.href='dashboard.html'"><i class="fa-solid fa-house"></i><span>Dashboard</span></li>
+            <li onclick="location.href='upload.html'"><i class="fa-solid fa-upload"></i><span>Upload</span></li>
+            <li onclick="location.href='parsing.html'"><i class="fa-solid fa-code"></i><span>Parsing</span></li>
+            <li onclick="location.href='validation.html'"><i class="fa-solid fa-circle-check"></i><span>Validation</span></li>
+            <li onclick="location.href='translation.html'"><i class="fa-solid fa-language"></i><span>Translation</span></li>
+            <li onclick="location.href='api.html'"><i class="fa-solid fa-cloud"></i><span>API</span></li>
+            <li onclick="location.href='data.html'"><i class="fa-solid fa-database"></i><span>Data Viewer</span></li>
+            <li onclick="location.href='error.html'"><i class="fa-solid fa-triangle-exclamation"></i><span>Error Reports</span></li>
+
+            <li class="active"><i class="fa-solid fa-gear"></i><span>Settings</span></li>
+
+            <li onclick="location.href='../index.html'"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <h1>Settings</h1>
+        </header>
+
+        <div class="card">
+
+            <h2>System Configuration</h2>
+
+            <div class="setting-item">
+                <label>API Status</label>
+                <button id="apiToggle">Enable</button>
+            </div>
+
+            <div class="setting-item">
+                <label>Auto Validation</label>
+                <button id="validationToggle">ON</button>
+            </div>
+
+            <div class="setting-item">
+                <label>Notification Alerts</label>
+                <button id="notifyToggle">ON</button>
+            </div>
+
+            <div class="setting-item">
+                <label>Theme Mode</label>
+                <button id="themeToggle">Light</button>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/settings.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>API Integration</title>
+
+<link rel="stylesheet" href="../css/api.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<aside class="sidebar">
+
+<div class="logo">
+<i class="fa-solid fa-file-waveform"></i>
+<h2>NCPDP EDI</h2>
+</div>
+
+<ul class="menu">
+
+<li onclick="location.href='dashboard.html'"><i class="fa-solid fa-house"></i><span>Dashboard</span></li>
+
+<li onclick="location.href='upload.html'"><i class="fa-solid fa-upload"></i><span>Upload</span></li>
+
+<li onclick="location.href='parsing.html'"><i class="fa-solid fa-code"></i><span>Parsing</span></li>
+
+<li onclick="location.href='validation.html'"><i class="fa-solid fa-circle-check"></i><span>Validation</span></li>
+
+<li onclick="location.href='translation.html'"><i class="fa-solid fa-language"></i><span>Translation</span></li>
+
+<li class="active"><i class="fa-solid fa-cloud"></i><span>API</span></li>
+
+<li onclick="location.href='data.html'"><i class="fa-solid fa-database"></i><span>Data Viewer</span></li>
+
+<li onclick="location.href='error.html'"><i class="fa-solid fa-triangle-exclamation"></i><span>Error Reports</span></li>
+
+<li onclick="location.href='settings.html'"><i class="fa-solid fa-gear"></i><span>Settings</span></li>
+
+<li onclick="location.href='../index.html'"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></li>
+
+</ul>
+
+</aside>
+
+<main class="main-content">
+
+<header class="topbar">
+
+<h1>API Integration</h1>
+
+<button id="sendBtn">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Send Request
+
+</button>
+
+</header>
+
+<div class="card">
+
+<h2>API Endpoint</h2>
+
+<input type="text" id="endpoint"
+value="https://api.ncpdptranslator.com/v1/translate">
+
+</div>
+
+<div class="editor">
+
+<div class="card">
+
+<h2>Request Body</h2>
+
+<textarea id="request">
+
+{
+   "file":"sample.edi",
+   "version":"D.0"
+}
+
+</textarea>
+
+</div>
+
+<div class="card">
+
+<h2>Response</h2>
+
+<textarea id="response" readonly></textarea>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Status</h2>
+
+<p id="status">Waiting...</p>
+
+<div class="progress">
+
+<div class="progress-bar" id="progressBar"></div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="../js/api.js"></script>
+
+</body>
+
+</html>

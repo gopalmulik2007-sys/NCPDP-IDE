@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | NCPDP EDI Translator API</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-file-waveform"></i>
+            <h2>NCPDP EDI</h2>
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </li>
+
+            <li onclick="location.href='upload.html'">
+                <i class="fa-solid fa-upload"></i>
+                <span>File Upload</span>
+            </li>
+
+            <li onclick="location.href='parsing.html'">
+                <i class="fa-solid fa-code"></i>
+                <span>Parsing</span>
+            </li>
+
+            <li onclick="location.href='validation.html'">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Validation</span>
+            </li>
+
+            <li onclick="location.href='translation.html'">
+                <i class="fa-solid fa-language"></i>
+                <span>Translation</span>
+            </li>
+
+            <li onclick="location.href='api.html'">
+                <i class="fa-solid fa-cloud"></i>
+                <span>API Usage</span>
+            </li>
+
+            <li onclick="location.href='data.html'">
+                <i class="fa-solid fa-database"></i>
+                <span>Data Viewer</span>
+            </li>
+
+            <li onclick="location.href='error.html'">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Error Reports</span>
+            </li>
+
+            <li onclick="location.href='settings.html'">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </li>
+
+            <li onclick="location.href='../index.html'">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div class="top-left">
+
+                <h1>Dashboard</h1>
+
+            </div>
+
+            <div class="top-right">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" placeholder="Search...">
+
+                </div>
+
+                <i class="fa-regular fa-bell notification"></i>
+
+                <div class="profile">
+
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=2563eb&color=fff" alt="Admin">
+
+                    <span>Admin</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Welcome -->
+        <section class="welcome">
+
+            <h2>Welcome Back 👋</h2>
+
+            <p>
+                Monitor your NCPDP EDI Translator API performance from one place.
+            </p>
+
+        </section>
+
+        <!-- Statistics -->
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Transactions</h3>
+                <h1 id="total">12,458</h1>
+            </div>
+
+            <div class="card">
+                <h3>Successful</h3>
+                <h1 id="success">10,982</h1>
+            </div>
+
+            <div class="card">
+                <h3>Failed</h3>
+                <h1 id="failed">892</h1>
+            </div>
+
+            <div class="card">
+                <h3>In Progress</h3>
+                <h1 id="progress">584</h1>
+            </div>
+
+        </section>
+
+        <!-- Charts -->
+        <section class="charts">
+
+            <div class="chart-box">
+
+                <h3>Transaction Trend</h3>
+
+                <canvas id="lineChart"></canvas>
+
+            </div>
+
+            <div class="chart-box">
+
+                <h3>Distribution</h3>
+
+                <canvas id="pieChart"></canvas>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Transactions -->
+        <section class="table-section">
+
+            <h2>Recent Transactions</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Patient</th>
+
+                        <th>Status</th>
+
+                        <th>Date</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="transactionTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
